@@ -11,11 +11,11 @@
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="prev" title="OpenSpiel" href="../open_spiel/" />
         <link rel="canonical" href="https://shimmy.farama.org/contents/dm_lab.html" />
 
-    <meta name="generator" content="sphinx-5.2.3, furo 2022.09.15.dev1"/>
+    <link rel="shortcut icon" href="../../_static/shimmy.svg"/><meta name="generator" content="sphinx-5.2.3, furo 2022.09.15.dev1"/>
         <title>DM Lab - Shimmy Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=3cf7b839e8c50b5f3a39bb99d90baa7b845de926" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=91b9f2a71a58ed2481980f1e5725e16457fde93d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=24b18ece81cb9ff18679a2945b9c89ba44829d18" />
     
     
 
@@ -290,32 +290,32 @@
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
 <p>Courtesy to <a class="reference external" href="https://github.com/deepmind/lab/issues/242">Danijar Hafner</a> for providing this install script.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
-<span class="nb">set</span> -eu
+<span class="nb">set</span><span class="w"> </span>-eu
 
 <span class="c1"># Dependencies</span>
-apt-get update <span class="o">&amp;&amp;</span> apt-get install -y <span class="se">\</span>
-    build-essential curl freeglut3 gettext git libffi-dev libglu1-mesa <span class="se">\</span>
-    libglu1-mesa-dev libjpeg-dev liblua5.1-0-dev libosmesa6-dev <span class="se">\</span>
-    libsdl2-dev lua5.1 pkg-config python-setuptools python3-dev <span class="se">\</span>
-    software-properties-common unzip zip zlib1g-dev g++
-pip3 install numpy
+apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>build-essential<span class="w"> </span>curl<span class="w"> </span>freeglut3<span class="w"> </span>gettext<span class="w"> </span>git<span class="w"> </span>libffi-dev<span class="w"> </span>libglu1-mesa<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libglu1-mesa-dev<span class="w"> </span>libjpeg-dev<span class="w"> </span>liblua5.1-0-dev<span class="w"> </span>libosmesa6-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libsdl2-dev<span class="w"> </span>lua5.1<span class="w"> </span>pkg-config<span class="w"> </span>python-setuptools<span class="w"> </span>python3-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>software-properties-common<span class="w"> </span>unzip<span class="w"> </span>zip<span class="w"> </span>zlib1g-dev<span class="w"> </span>g++
+pip3<span class="w"> </span>install<span class="w"> </span>numpy
 
 <span class="c1"># Bazel</span>
-apt-get install -y apt-transport-https curl gnupg
-curl -fsSL https://bazel.build/bazel-release.pub.gpg <span class="p">|</span> gpg --dearmor &gt; bazel.gpg
-mv bazel.gpg /etc/apt/trusted.gpg.d/
-<span class="nb">echo</span> <span class="s2">&quot;deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8&quot;</span> <span class="p">|</span> tee /etc/apt/sources.list.d/bazel.list
-apt-get update <span class="o">&amp;&amp;</span> apt-get install -y bazel
+apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>apt-transport-https<span class="w"> </span>curl<span class="w"> </span>gnupg
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://bazel.build/bazel-release.pub.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>&gt;<span class="w"> </span>bazel.gpg
+mv<span class="w"> </span>bazel.gpg<span class="w"> </span>/etc/apt/trusted.gpg.d/
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/bazel.list
+apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>bazel
 
 <span class="c1"># Build</span>
-git clone https://github.com/deepmind/lab.git
-<span class="nb">cd</span> lab
-<span class="nb">echo</span> <span class="s1">&#39;build --cxxopt=-std=c++17&#39;</span> &gt; .bazelrc
-bazel build -c opt //python/pip_package:build_pip_package
-./bazel-bin/python/pip_package/build_pip_package /tmp/dmlab_pkg
-pip3 install --force-reinstall /tmp/dmlab_pkg/deepmind_lab-*.whl
-<span class="nb">cd</span> ..
-rm -rf lab
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/deepmind/lab.git
+<span class="nb">cd</span><span class="w"> </span>lab
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;build --cxxopt=-std=c++17&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>.bazelrc
+bazel<span class="w"> </span>build<span class="w"> </span>-c<span class="w"> </span>opt<span class="w"> </span>//python/pip_package:build_pip_package
+./bazel-bin/python/pip_package/build_pip_package<span class="w"> </span>/tmp/dmlab_pkg
+pip3<span class="w"> </span>install<span class="w"> </span>--force-reinstall<span class="w"> </span>/tmp/dmlab_pkg/deepmind_lab-*.whl
+<span class="nb">cd</span><span class="w"> </span>..
+rm<span class="w"> </span>-rf<span class="w"> </span>lab
 </pre></div>
 </div>
 </section>
