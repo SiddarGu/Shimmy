@@ -8,14 +8,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
     <meta property="og:url" content="https://shimmy.farama.org/index.html" /><meta name="twitter:card" content="summary_large_image"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="genindex/" /><link rel="search" title="Search" href="search/" /><link rel="next" title="Installation and Usage" href="installation/" />
+<link rel="index" title="Index" href="genindex/" /><link rel="search" title="Search" href="search/" /><link rel="next" title="&lt;no title&gt;" href="contents/" />
         <link rel="canonical" href="https://shimmy.farama.org/index.html" />
 
     <link rel="shortcut icon" href="_static/shimmy.svg"/><meta name="generator" content="sphinx-5.2.3, furo 2022.09.15.dev1"/>
         <title>Shimmy Documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=3cf7b839e8c50b5f3a39bb99d90baa7b845de926" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=24b18ece81cb9ff18679a2945b9c89ba44829d18" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=b332e145f118bbc5b181998bee244c1e810e1f8b" />
     
     
 
@@ -224,11 +224,7 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation/">Installation and Usage</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contents/gym/">OpenAI Gym</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/atari/">Atari Environments</a></li>
@@ -284,21 +280,74 @@
         </div>
         <article role="main">
           
-          <section id="shimmy-is-an-api-conversion-tool-for-popular-external-reinforcement-learning-environments-to-gymnasium-and-pettingzoo-apis">
+          <figure class="align-default">
+<a class="reference internal image-reference" href="_images/shimmy.svg"><img alt="Shimmy Logo" src="_images/shimmy.svg" width="500" /></a>
+</figure>
+<section id="shimmy-is-an-api-conversion-tool-for-popular-external-reinforcement-learning-environments-to-gymnasium-and-pettingzoo-apis">
 <h1>Shimmy is an API conversion tool for popular external reinforcement learning environments to <a class="reference external" href="https://github.com/farama-Foundation/gymnasium">Gymnasium</a> and <a class="reference external" href="https://github.com/farama-Foundation/pettingZoo/">PettingZoo</a> APIs.<a class="headerlink" href="#shimmy-is-an-api-conversion-tool-for-popular-external-reinforcement-learning-environments-to-gymnasium-and-pettingzoo-apis" title="Permalink to this heading">#</a></h1>
-<p>Supported APIs for Gymnasium</p>
+<section id="supported-apis">
+<h2>Supported APIs<a class="headerlink" href="#supported-apis" title="Permalink to this heading">#</a></h2>
+<section id="openai-gym">
+<h3>OpenAI Gym<a class="headerlink" href="#openai-gym" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>OpenAI Gym</p></li>
-<li><p>Atari Environments</p></li>
-<li><p>DMControl</p></li>
+<li><p>Bindings to convert OpenAI Gym environments to Gymnasium Environments.</p></li>
 </ul>
-<p>Supported APIs for PettingZoo</p>
+</section>
+<section id="atari-environments-for-openai-gym">
+<h3>Atari Environments for OpenAI Gym<a class="headerlink" href="#atari-environments-for-openai-gym" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>OpenSpiel</p></li>
-<li><p>DmControl Multiagent Soccer</p></li>
-<li><p>DMLab Environments</p></li>
+<li><p>Bindings to ALE-py to provide Atari environments in Gymnasium.</p></li>
 </ul>
-<p>We are open to supporting more external APIs, please create an issue or ideally, a pull request implementing the new API.</p>
+</section>
+<section id="deepmind-control">
+<h3><a class="reference external" href="https://github.com/deepmind/dm_control">DeepMind Control</a><a class="headerlink" href="#deepmind-control" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Gymnasium bindings for single agent environments.</p></li>
+<li><p>Pettingzoo bindings for multiagent soccer environments.</p></li>
+</ul>
+</section>
+<section id="dmlab">
+<h3><a class="reference external" href="https://github.com/deepmind/lab">DMLab</a><a class="headerlink" href="#dmlab" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Pettingzoo bindings for all environments.</p></li>
+</ul>
+</section>
+<section id="openspiel">
+<h3><a class="reference external" href="https://github.com/deepmind/open_spiel">OpenSpiel</a><a class="headerlink" href="#openspiel" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Pettingzoo bindings for all environments.</p></li>
+</ul>
+</section>
+<section id="incoming-projects">
+<h3>Incoming Projects<a class="headerlink" href="#incoming-projects" title="Permalink to this heading">#</a></h3>
+<p>The following are a list of existing environment suites that we are looking into bringing into Shimmy.
+We are actively looking for developers to contribute to this project, if you are interested in helping, please reach out to us.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/deepmind/dm_env">The DeepMing Env API</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deepmind/bsuite">Behaviour Suite</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deepmind/meltingpot">Melting Pot</a></p></li>
+</ul>
+</section>
+</section>
+<section id="installation-and-usage">
+<h2>Installation and Usage<a class="headerlink" href="#installation-and-usage" title="Permalink to this heading">#</a></h2>
+<p>To install Shimmy from PyPI:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span>
+</pre></div>
+</div>
+<p>Out of the box, Shimmy doesn’t install any of the dependencies required for the environments it supports.
+To install them, you’ll have to install the optional extras.
+All single agent environments have registration under the Gymnasium API, while all multiagent environments must be wrapped using the corresponding compatibility wrappers.</p>
+<section id="id1">
+<h3>OpenAI Gym<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<section id="installation">
+<h4>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">gym</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
 <section id="at-a-glance">
 <h2>At a glance<a class="headerlink" href="#at-a-glance" title="Permalink to this heading">#</a></h2>
 <p>This is an example of using Shimmy to convert DM Control environments into a Gymnasium compatible environment:</p>
@@ -332,8 +381,6 @@ dm_control/acrobot-swingup-v0
 <p>If you use this in your research, please cite:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TBD</span>
 </pre></div>
-</div>
-<div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -386,11 +433,11 @@ dm_control/acrobot-swingup-v0
         const menuBtn = document.querySelector(".farama-header-menu__btn");
         const menuContainer = document.querySelector(".farama-header-menu-container");
         if (document.querySelector(".farama-header-menu").classList.contains("active")) {
-          menuBtn.ariaExpanded = "false";
-          menuContainer.ariaHidden = "true";
+          menuBtn.setAttribute("aria-expanded", "false");
+          menuContainer.setAttribute("aria-hidden", "true");
         } else {
-          menuBtn.ariaExpanded = "true";
-          menuContainer.ariaHidden = "false";
+          menuBtn.setAttribute("aria-expanded", "true");
+          menuContainer.setAttribute("aria-hidden", "false");
         }
         document.querySelector(".farama-header-menu").classList.toggle("active");
       }
