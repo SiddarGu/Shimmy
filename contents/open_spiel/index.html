@@ -15,7 +15,7 @@
         <title>OpenSpiel - Shimmy Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=3cf7b839e8c50b5f3a39bb99d90baa7b845de926" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=b332e145f118bbc5b181998bee244c1e810e1f8b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=9e86d0f2b4c7365fca1b48b729b6cac79739c5d7" />
     
     
 
@@ -303,7 +303,12 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="shimmy.openspiel_compatibility.OpenspielCompatibilityV0">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">shimmy.openspiel_compatibility.</span></span><span class="sig-name descname"><span class="pre">OpenspielCompatibilityV0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pyspiel.Game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shimmy.openspiel_compatibility.OpenspielCompatibilityV0" title="Permalink to this definition">#</a></dt>
-<dd><p>Wrapper that converts an openspiel environment into a pettingzoo environment.</p>
+<dd><p>This compatibility wrapper that converts an openspiel environment into a pettingzoo environment.</p>
+<p>OpenSpiel is a collection of environments and algorithms for research in general reinforcement learning
+and search/planning in games. OpenSpiel supports n-player (single- and multi- agent) zero-sum,
+cooperative and general-sum, one-shot and sequential, strictly turn-taking and simultaneous-move,
+perfect and imperfect information games, as well as traditional multiagent environments such as
+(partially- and fully- observable) grid worlds and social dilemmas.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="shimmy.openspiel_compatibility.OpenspielCompatibilityV0.action_space">
 <span class="sig-name descname"><span class="pre">action_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shimmy.openspiel_compatibility.OpenspielCompatibilityV0.action_space" title="Permalink to this definition">#</a></dt>
