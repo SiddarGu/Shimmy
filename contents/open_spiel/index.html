@@ -8,7 +8,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
     <meta property="og:url" content="https://shimmy.farama.org/contents/open_spiel.html" /><meta name="twitter:card" content="summary_large_image"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="DM Lab" href="../dm_lab/" /><link rel="prev" title="DM Control (both single and multiagent environments)" href="../dm_control/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" />
         <link rel="canonical" href="https://shimmy.farama.org/contents/open_spiel.html" />
 
     <link rel="shortcut icon" href="../../_static/shimmy.svg"/><meta name="generator" content="sphinx-5.2.3, furo 2022.09.15.dev1"/>
@@ -224,15 +224,7 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../gym/">OpenAI Gym</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../atari/">Atari Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dm_control/">DM Control (both single and multiagent environments)</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">OpenSpiel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dm_lab/">DM Lab</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/shimmy">Github</a></li>
 </ul>
@@ -282,22 +274,6 @@
           
           <section id="openspiel">
 <h1>OpenSpiel<a class="headerlink" href="#openspiel" title="Permalink to this heading">#</a></h1>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">pettingzoo</span><span class="p">]</span>
-</pre></div>
-</div>
-</section>
-<section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyspiel</span>
-<span class="kn">from</span> <span class="nn">shimmy.openspiel_compatibility</span> <span class="kn">import</span> <span class="n">OpenspielCompatibilityV0</span>
-
-<span class="n">env</span> <span class="o">=</span> <span class="n">pyspiel</span><span class="o">.</span><span class="n">load_game</span><span class="p">(</span><span class="s2">&quot;2048&quot;</span><span class="p">)</span>
-<span class="n">env</span> <span class="o">=</span> <span class="n">OpenspielCompatibilityV0</span><span class="p">(</span><span class="n">game</span><span class="o">=</span><span class="n">env</span><span class="p">,</span> <span class="n">render_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
 <section id="class-description">
 <h2>Class Description<a class="headerlink" href="#class-description" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
@@ -451,26 +427,8 @@ This wrapper chooses which one to use depending on the following precedence:</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../dm_lab/">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">DM Lab</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-            <a class="prev-page" href="../dm_control/">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">DM Control (both single and multiagent environments)</div>
-                
-              </div>
-            </a>
+          
+            
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -509,8 +467,6 @@ This wrapper chooses which one to use depending on the following precedence:</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">OpenSpiel</a><ul>
-<li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#usage">Usage</a></li>
 <li><a class="reference internal" href="#class-description">Class Description</a><ul>
 <li><a class="reference internal" href="#shimmy.openspiel_compatibility.OpenspielCompatibilityV0"><code class="docutils literal notranslate"><span class="pre">OpenspielCompatibilityV0</span></code></a><ul>
 <li><a class="reference internal" href="#shimmy.openspiel_compatibility.OpenspielCompatibilityV0.action_space"><code class="docutils literal notranslate"><span class="pre">OpenspielCompatibilityV0.action_space()</span></code></a></li>

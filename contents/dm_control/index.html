@@ -8,7 +8,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
     <meta property="og:url" content="https://shimmy.farama.org/contents/dm_control.html" /><meta name="twitter:card" content="summary_large_image"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="OpenSpiel" href="../open_spiel/" /><link rel="prev" title="Atari Environments" href="../atari/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" />
         <link rel="canonical" href="https://shimmy.farama.org/contents/dm_control.html" />
 
     <link rel="shortcut icon" href="../../_static/shimmy.svg"/><meta name="generator" content="sphinx-5.2.3, furo 2022.09.15.dev1"/>
@@ -224,15 +224,7 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../gym/">OpenAI Gym</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../atari/">Atari Environments</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">DM Control (both single and multiagent environments)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../open_spiel/">OpenSpiel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dm_lab/">DM Lab</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/shimmy">Github</a></li>
 </ul>
@@ -282,41 +274,8 @@
           
           <section id="dm-control-both-single-and-multiagent-environments">
 <h1>DM Control (both single and multiagent environments)<a class="headerlink" href="#dm-control-both-single-and-multiagent-environments" title="Permalink to this heading">#</a></h1>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">dm</span><span class="o">-</span><span class="n">control</span><span class="p">]</span>
-</pre></div>
-</div>
-</section>
-<section id="usage-single-agent">
-<h2>Usage (Single agent)<a class="headerlink" href="#usage-single-agent" title="Permalink to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
-
-<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;dm_control/acrobot_swingup_sparse-v0&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="usage-multi-agent">
-<h2>Usage (Multi agent)<a class="headerlink" href="#usage-multi-agent" title="Permalink to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dm_control.locomotion</span> <span class="kn">import</span> <span class="n">soccer</span> <span class="k">as</span> <span class="n">dm_soccer</span>
-<span class="kn">from</span> <span class="nn">shimmy.dm_control_multiagent_compatibility</span> <span class="kn">import</span> <span class="p">(</span>
-    <span class="n">DmControlMultiAgentCompatibilityV0</span><span class="p">,</span>
-<span class="p">)</span>
-
-<span class="n">walker_type</span> <span class="o">=</span> <span class="n">dm_soccer</span><span class="o">.</span><span class="n">WalkerType</span><span class="o">.</span><span class="n">BOXHEAD</span><span class="p">,</span>
-
-<span class="n">env</span> <span class="o">=</span> <span class="n">dm_soccer</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
-    <span class="n">team_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-    <span class="n">time_limit</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span>
-    <span class="n">disable_walker_contacts</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">enable_field_box</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">terminate_on_goal</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">walker_type</span><span class="o">=</span><span class="n">walker_type</span><span class="p">,</span>
-<span class="p">)</span>
-
-<span class="n">env</span> <span class="o">=</span> <span class="n">DmControlMultiAgentCompatibilityV0</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
-</pre></div>
-</div>
+<section id="class-description">
+<h2>Class Description<a class="headerlink" href="#class-description" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="shimmy.dm_control_multiagent_compatibility.DmControlMultiAgentCompatibilityV0">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">shimmy.dm_control_multiagent_compatibility.</span></span><span class="sig-name descname"><span class="pre">DmControlMultiAgentCompatibilityV0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dm_control.composer.Environment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shimmy.dm_control_multiagent_compatibility.DmControlMultiAgentCompatibilityV0" title="Permalink to this definition">#</a></dt>
@@ -386,9 +345,6 @@ using MuJoCo physics. This compatibility wrapper converts a dm-control environme
 
 </dd></dl>
 
-</section>
-<section id="class-description">
-<h2>Class Description<a class="headerlink" href="#class-description" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="shimmy.dm_control_compatibility.DmControlCompatibilityV0">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">shimmy.dm_control_compatibility.</span></span><span class="sig-name descname"><span class="pre">DmControlCompatibilityV0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">composer.Environment</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">control.Environment</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dm_env.Environment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">84</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">84</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">camera_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shimmy.dm_control_compatibility.DmControlCompatibilityV0" title="Permalink to this definition">#</a></dt>
@@ -460,26 +416,8 @@ uses <cite>np.random.Generator</cite>, therefore the return type of <cite>np_ran
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../open_spiel/">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">OpenSpiel</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-            <a class="prev-page" href="../atari/">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Atari Environments</div>
-                
-              </div>
-            </a>
+          
+            
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -518,9 +456,7 @@ uses <cite>np.random.Generator</cite>, therefore the return type of <cite>np_ran
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">DM Control (both single and multiagent environments)</a><ul>
-<li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#usage-single-agent">Usage (Single agent)</a></li>
-<li><a class="reference internal" href="#usage-multi-agent">Usage (Multi agent)</a><ul>
+<li><a class="reference internal" href="#class-description">Class Description</a><ul>
 <li><a class="reference internal" href="#shimmy.dm_control_multiagent_compatibility.DmControlMultiAgentCompatibilityV0"><code class="docutils literal notranslate"><span class="pre">DmControlMultiAgentCompatibilityV0</span></code></a><ul>
 <li><a class="reference internal" href="#shimmy.dm_control_multiagent_compatibility.DmControlMultiAgentCompatibilityV0.action_space"><code class="docutils literal notranslate"><span class="pre">DmControlMultiAgentCompatibilityV0.action_space()</span></code></a></li>
 <li><a class="reference internal" href="#shimmy.dm_control_multiagent_compatibility.DmControlMultiAgentCompatibilityV0.action_spaces"><code class="docutils literal notranslate"><span class="pre">DmControlMultiAgentCompatibilityV0.action_spaces</span></code></a></li>
@@ -535,9 +471,6 @@ uses <cite>np.random.Generator</cite>, therefore the return type of <cite>np_ran
 <li><a class="reference internal" href="#shimmy.dm_control_multiagent_compatibility.DmControlMultiAgentCompatibilityV0.step"><code class="docutils literal notranslate"><span class="pre">DmControlMultiAgentCompatibilityV0.step()</span></code></a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a class="reference internal" href="#class-description">Class Description</a><ul>
 <li><a class="reference internal" href="#shimmy.dm_control_compatibility.DmControlCompatibilityV0"><code class="docutils literal notranslate"><span class="pre">DmControlCompatibilityV0</span></code></a><ul>
 <li><a class="reference internal" href="#shimmy.dm_control_compatibility.DmControlCompatibilityV0.action_space"><code class="docutils literal notranslate"><span class="pre">DmControlCompatibilityV0.action_space</span></code></a></li>
 <li><a class="reference internal" href="#shimmy.dm_control_compatibility.DmControlCompatibilityV0.close"><code class="docutils literal notranslate"><span class="pre">DmControlCompatibilityV0.close()</span></code></a></li>
