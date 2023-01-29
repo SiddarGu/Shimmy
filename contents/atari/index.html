@@ -282,6 +282,20 @@
           
           <section id="atari-environments">
 <h1>Atari Environments<a class="headerlink" href="#atari-environments" title="Permalink to this heading">#</a></h1>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">atari</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;ALE/Pong-v5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
 <section id="class-description">
 <h2>Class Description<a class="headerlink" href="#class-description" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
@@ -493,6 +507,8 @@ during deserialization by Gymnasium so these side-effects must reside here.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Atari Environments</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
 <li><a class="reference internal" href="#class-description">Class Description</a><ul>
 <li><a class="reference internal" href="#shimmy.atari_env.AtariEnv"><code class="docutils literal notranslate"><span class="pre">AtariEnv</span></code></a><ul>
 <li><a class="reference internal" href="#shimmy.atari_env.AtariEnv.action_space"><code class="docutils literal notranslate"><span class="pre">AtariEnv.action_space</span></code></a></li>

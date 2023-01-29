@@ -338,31 +338,45 @@ We are actively looking for developers to contribute to this project, if you are
 <p>Out of the box, Shimmy doesn’t install any of the dependencies required for the environments it supports.
 To install them, you’ll have to install the optional extras.
 All single agent environments have registration under the Gymnasium API, while all multiagent environments must be wrapped using the corresponding compatibility wrappers.</p>
-<p>penAI Gym</p>
+<section id="for-developers-and-testing-only">
+<h3>For Developers and Testing Only<a class="headerlink" href="#for-developers-and-testing-only" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">testing</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="to-just-install-everything">
+<h3>To just install everything<a class="headerlink" href="#to-just-install-everything" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="nb">all</span><span class="p">,</span> <span class="n">testing</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h3>OpenAI Gym<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <section id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h3>
+<h4>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">gym</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
 <section id="usage">
-<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h3>
+<h4>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
 
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;GymV22CompatibilityV0&quot;</span><span class="p">,</span> <span class="n">env_name</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
+</section>
 <section id="atari-environments">
 <h3>Atari Environments<a class="headerlink" href="#atari-environments" title="Permalink to this heading">#</a></h3>
-<section id="id1">
-<h4>Installation<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<section id="id2">
+<h4>Installation<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">atari</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
-<section id="id2">
-<h4>Usage<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<section id="id3">
+<h4>Usage<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
 
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;ALE/Pong-v5&quot;</span><span class="p">)</span>
@@ -372,9 +386,17 @@ All single agent environments have registration under the Gymnasium API, while a
 </section>
 <section id="dm-control">
 <h3>DM Control<a class="headerlink" href="#dm-control" title="Permalink to this heading">#</a></h3>
-<section id="id3">
-<h4>Installation<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<section id="id4">
+<h4>Installation<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">dm</span><span class="o">-</span><span class="n">control</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="usage-single-agent">
+<h4>Usage (Single agent)<a class="headerlink" href="#usage-single-agent" title="Permalink to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;dm_control/acrobot_swingup_sparse-v0&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -400,19 +422,11 @@ All single agent environments have registration under the Gymnasium API, while a
 </pre></div>
 </div>
 </section>
-<section id="usage-single-agent">
-<h4>Usage (Single agent)<a class="headerlink" href="#usage-single-agent" title="Permalink to this heading">#</a></h4>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
-
-<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;dm_control/acrobot_swingup_sparse-v0&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
 </section>
 <section id="dm-lab">
 <h3>DM Lab<a class="headerlink" href="#dm-lab" title="Permalink to this heading">#</a></h3>
-<section id="id4">
-<h4>Installation<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<section id="id5">
+<h4>Installation<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
 <p>Courtesy to <a class="reference external" href="https://github.com/deepmind/lab/issues/242">Danijar Hafner</a> for providing this install script.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 <span class="nb">set</span><span class="w"> </span>-eu
@@ -444,8 +458,8 @@ rm<span class="w"> </span>-rf<span class="w"> </span>lab
 </pre></div>
 </div>
 </section>
-<section id="id5">
-<h4>Usage<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<section id="id6">
+<h4>Usage<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">deepmind_lab</span>
 
 <span class="kn">from</span> <span class="nn">shimmy.dm_lab_compatibility</span> <span class="kn">import</span> <span class="n">DmLabCompatibilityV0</span>
@@ -460,28 +474,16 @@ rm<span class="w"> </span>-rf<span class="w"> </span>lab
 </div>
 </section>
 </section>
-<section id="for-developers-and-testing-only">
-<h3>For Developers and Testing Only<a class="headerlink" href="#for-developers-and-testing-only" title="Permalink to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">testing</span><span class="p">]</span>
-</pre></div>
-</div>
-</section>
-<section id="to-just-install-everything">
-<h3>To just install everything<a class="headerlink" href="#to-just-install-everything" title="Permalink to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="nb">all</span><span class="p">,</span> <span class="n">testing</span><span class="p">]</span>
-</pre></div>
-</div>
-</section>
-<section id="id6">
-<h3>OpenSpiel<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <section id="id7">
-<h4>Installation<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<h3>OpenSpiel<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="id8">
+<h4>Installation<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">pettingzoo</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
-<section id="id8">
-<h4>Usage<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<section id="id9">
+<h4>Usage<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyspiel</span>
 <span class="kn">from</span> <span class="nn">shimmy.openspiel_compatibility</span> <span class="kn">import</span> <span class="n">OpenspielCompatibilityV0</span>
 

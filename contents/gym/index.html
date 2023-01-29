@@ -282,6 +282,20 @@
           
           <section id="openai-gym">
 <h1>OpenAI Gym<a class="headerlink" href="#openai-gym" title="Permalink to this heading">#</a></h1>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">gym</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;GymV22CompatibilityV0&quot;</span><span class="p">,</span> <span class="n">env_name</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
 <section id="class-description">
 <h2>Class Description<a class="headerlink" href="#class-description" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
@@ -562,6 +576,8 @@ New step API refers to step() method returning (observation, reward, terminated,
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">OpenAI Gym</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
 <li><a class="reference internal" href="#class-description">Class Description</a><ul>
 <li><a class="reference internal" href="#shimmy.openai_gym_compatibility.GymV26CompatibilityV0"><code class="docutils literal notranslate"><span class="pre">GymV26CompatibilityV0</span></code></a><ul>
 <li><a class="reference internal" href="#shimmy.openai_gym_compatibility.GymV26CompatibilityV0.action_space"><code class="docutils literal notranslate"><span class="pre">GymV26CompatibilityV0.action_space</span></code></a></li>
